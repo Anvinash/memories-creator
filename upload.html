@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <style>
+        body{
+            background-image: linear-gradient(180deg,#016A70,#FFFFDD);
+            width: 100%;
+            height: 100%;
+        }
+    input , select , textarea{
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+    .text{
+        padding: 10px 10px 10px 10px;
+        color: #76453B;
+        font-family:  cursive;
+        font-weight: bolder;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    .submit{
+        background-color: blue;
+        color: #fff;
+    }
+    
+    .clear{
+        background-color: red;
+        color: #fff;
+    }
+    form{
+        border-radius: 10px;
+    background-color: #EEF5FF;
+    padding: 40px;
+    height: 790px;
+    width: 500px;
+    margin-left: 660px;
+    margin-top: 60px;
+}
+h1{
+    text-align: center;
+    justify-content: center;
+    color: #A79277;
+}
+</style>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="text" name="title" id="title" placeholder="Title"><br><br>
+        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea><br><br>
+        <input type="text" name="tags" id="tags" placeholder="Tags (Commas separated)"><br><br>
+        <input type="text" name="date" placeholder="DD-MM-YYYY" id="">
+        <label for="testImage">Choose an image:</label>
+        <input type="file" id="testImage" name="testImage">
+        <br>
+        <br>
+        <input type="submit" name="submit" class="submit" onclick="clickk()" id="submit" value="SUBMIT"><br><br>
+        <input type="submit" name="clear"  class="clear" id="clear" value="CLEAR"><br><br>
+    </form>
+</body>
+</html> 
+
+
